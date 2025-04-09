@@ -21,7 +21,9 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 - **핵심 구조(예시)**:  
   - 특정 환경(실내외 공간 ex: 침실,교회 등)을 기반으로 한 생성 모델(PGGAN ,BigGAN, StyleGAN) 학습  
   - ResNet18을 활용한 특성(ex: 조명, 나무 등) 유무 판별하는 모델 학습  
-  - SVM을 통해 객체 유무를 분류하고, 해당 속성의 Latent Boundary 추출
+  - 학습된 ResNet18로 GAN 이미지의 특정 속성을 Positive, Negative 데이터로 분류
+  - SVM을 통해 해당 속성의 Latent Boundary 추출
+  - 해당 boundary를 기준으로 latent vector 조작하여, 특정 속성이 변경된 이미지를 생성
 
 - **활용**:  
   - 해당 연구에서 사용한 Generator, 해당 Generator를 기반으로 학습시킨 SVM 모델을 사용하였음 
