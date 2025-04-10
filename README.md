@@ -95,6 +95,16 @@ SVM으로 생성된 Positive / Negative 벡터는 각각 StyleGAN의 Generator�
 
 <br>
 
-## :triangular_flag_on_post: Testing
+## 🛠 실행 방법 (How to Run)
+
+1. 예제 이미지 준비  
+   - 코랩(Colab)을 통해 생성한 **GAN 이미지 예제**를 `input_data/` 폴더에 저장  
+
+2. 아래 모델 파일을 다운로드하여 `higan/models/pretrain/pytorch` 경로에 저장  
+   - 🔗 [StyleGAN Bedroom Checkpoint 다운로드](https://www.dropbox.com/s/h1w7ld4hsvte5zf/stylegan_bedroom256_generator.pth)
+
+3. 프로젝트 루트 디렉토리에서 `Higan_CAM.ipynb` 실행
+
+
 
 
