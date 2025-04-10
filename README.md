@@ -6,13 +6,14 @@ CAM representation with HiGAN
 
 최근 Diffusion 모델은 마스크 지정이나 텍스트 프롬프트를 통한 이미지 조작에 널리 활용되고 있다. 하지만 사용자가 조작하고자 하는 속성의 위치나 대상이 이미지 상 어디에 반영되어야 하는지를 **사전에 파악할 수 있다면**, 더욱 직관적이고 효율적인 조작이 가능할 것이다.
 
-GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습하고, latent space나 파라미터 조작을 통해 특정 속성을 변경하거나 추가할 수 있는 특징을 가진다. 본 프로젝트는 이러한 **GAN의 구조적 조작 가능성**과 **Grad-CAM을 활용한 해석 기법**을 결합하여, 조작 대상의 위치를 시각적으로 식별하고, 이를 향후 Diffusion 기반 이미지 생성에 활용할 수 있는 가능성을 모색한다.
+GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습하고, latent space나 파라미터 조작을 통해 특정 속성을 변경하거나 추가할 수 있는 특징을 가진다. 본 프로젝트는 이러한 **GAN의 구조적 조작 가능성**과 **Grad-CAM을 활용한 해석 기법**을 결합하여, 조작 대상의 위치를 시각적으로 식별하고, 이를 향후 Diffusion 기반 이미지 생성에 활용할 수 있는 가능성을 모색한다.   
 
----
+<br>
+
 
 ## 📚 관련/참고 연구
 
-### 📄 *Semantic Hierarchy Emerges in Deep Generative Representations for Scene Synthesis*
+### 📄 *Semantic Hierarchy Emerges in Deep Generative Representations for Scene Synthesis (HiGAN)*
 
 - **핵심 요약**:  
   이 연구는 실내 장면 생성에 사용된 **StyleGAN 기반 Generator**에서 **계층적 의미 구조(Semantic Hierarchy)**가 자연스럽게 형성된다는 점에 주목하였다.  
@@ -31,7 +32,7 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 
 - **GitHub**: [https://github.com/soccz/HIGAN](https://github.com/soccz/HIGAN)
 
---
+<br>
 
 ## 🔍 Core Idea
 
@@ -39,18 +40,19 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 - **SVM**을 통해 속성 존재 유무를 기준으로 Latent Space에서의 분류 경계(Boundary)를 학습
 - **Grad-CAM**을 활용하여 생성된 이미지에서 조작 속성에 해당하는 영역을 시각적으로 해석
 - 이를 통해 사용자가 조작하고자 하는 **속성이 반영되어야 할 위치를 사전 식별**할 수 있음
-- 향후 **Diffusion 모델과 연계하여 마스크 또는 guide로 활용 가능**
+- 향후 **Diffusion 모델과 연계하여 마스크 또는 guide로 활용 가능**   
 
----
+<br>
 
 ## 🛠️ 기술 스택
 
 - `StyleGAN2` – 이미지 생성 및 latent 조작
 - `SVM (Linear)` – Latent Space 분류 경계 학습
 - `Grad-CAM` – 속성 강조 영역 시각화
-- `ResNet18` – 조명 유무 분류에 활용된 pretrained 모델
+- `ResNet18` – 조명 유무 분류에 활용된 pretrained 모델   
 
----
+<br>
+
 
 ## 📁 폴더 구성
 
