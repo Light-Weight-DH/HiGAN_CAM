@@ -57,6 +57,8 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 
 본 프로젝트는 생성 모델의 조작 가능성과 해석 기법을 결합하여, **StyleGAN 기반 이미지 생성**, **Latent Space 조작**, **속성 시각화**, **공간 추출**으로 이어지는 과정을 통해 이미지 상 특정 속성의 공간적 반영 위치를 도출한다. 전반적인 구성은 다음과 같다.
 
+![Image](https://github.com/user-attachments/assets/a01b7748-e8b5-498d-8a12-32881de7c694)
+<br>
 ### 1. StyleGAN을 활용한 이미지 생성
 본 프로젝트는 **Ceyuan Yang and Yujun Shen의 연구(HIGAN)**에서 공개한 코드와 체크포인트를 기반으로 하여, StyleGAN2를 활용한 이미지 생성을 수행하였다. 사용된 모델은 **LSUN Bedroom 데이터셋**(해상도 256×256, 약 50,000장)을 기반으로 학습된 것으로, 다양한 조명 조건과 구조적 특성이 반영되어 있어 생성 이미지의 조작 및 분석에 적합하다.
 
@@ -84,6 +86,15 @@ SVM으로 생성된 Positive / Negative 벡터는 각각 StyleGAN의 Generator�
 - 클러스터별 평균 누적값을 기준으로 상위 3개 클러스터를 최종 대상 위치로 선정  
 - 각 클러스터의 중요도는 클러스터 내 heatmap 평균값과 점 개수를 곱한 값으로 계산
 
-## 💡 Notice
+<br>
+
+## :arrow_forward: **Colab QuickStart**
+
+[[예시데이터 생성](https://colab.research.google.com/drive/1gdmoDPuyOJKogsPuvj9BmficmRiDbomB)] <br>
+[[HiGAN_CAM](https://colab.research.google.com/drive/1U4E21tIwgUvybyZYvlB4m4CnWCxLP0ex)] <br>
+
+<br>
+
+## :triangular_flag_on_post: Testing
 
 
