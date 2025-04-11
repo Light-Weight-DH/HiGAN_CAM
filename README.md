@@ -119,9 +119,10 @@ SVM으로 생성된 Positive / Negative 벡터는 각각 StyleGAN의 Generator�
 3. 프로젝트 루트 디렉토리에서 `Higan_CAM.ipynb` 실행
 
 <br> 
+<br>
 
 ## 📌 예시 결과 (Result)
-
+![Image](https://github.com/user-attachments/assets/902e8d92-aa74-4e9a-be5d-545387c178ac)
 
 
 
