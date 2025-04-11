@@ -11,6 +11,7 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 <br>
 
 
+
 ## 📚 관련/참고 연구
 
 ### 📄 *Semantic Hierarchy Emerges in Deep Generative Representations for Scene Synthesis (HiGAN)*
@@ -34,6 +35,19 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 
 <br>
 
+## 💡 활용 프로젝트 (Applied Project)
+
+### 조명 추천 및 적용 시스템
+
+본 프로젝트의 기법과 **Diffusion 모델**을 결합하여 실내 공간의 조명 배치 위치를 추천하고,  
+추천된 위치에 조명 효과를 사실적으로 **합성하는 종합적 시스템** 개발에 활용하였다. 
+
+프로젝트 상세 내용은 링크를 통해 확인 바람. <br>
+- **GitHub**: [Lumterior](https://github.com/jihyeyoo/inisw)
+
+<br>
+
+
 ## 🔍 Core Idea
 
 - **StyleGAN**을 기반으로, 특정 속성이 존재하는 이미지와 그렇지 않은 이미지의 Latent Vector를 분리하여 학습
@@ -46,7 +60,7 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 
 ## 🛠️ 기술 스택
 
-- `StyleGAN2` – 이미지 생성 및 latent 조작
+- `StyleGAN` – 이미지 생성 및 latent 조작
 - `SVM (Linear)` – Latent Space 분류 경계 학습
 - `Grad-CAM` – 속성 강조 영역 시각화
 - `ResNet18` – 조명 유무 분류에 활용된 pretrained 모델   
@@ -60,7 +74,7 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 ![Image](https://github.com/user-attachments/assets/a01b7748-e8b5-498d-8a12-32881de7c694)
 <br>
 ### 1. StyleGAN을 활용한 이미지 생성
-본 프로젝트는 **Ceyuan Yang and Yujun Shen의 연구(HIGAN)**에서 공개한 코드와 체크포인트를 기반으로 하여, StyleGAN2를 활용한 이미지 생성을 수행하였다. 사용된 모델은 **LSUN Bedroom 데이터셋**(해상도 256×256, 약 50,000장)을 기반으로 학습된 것으로, 다양한 조명 조건과 구조적 특성이 반영되어 있어 생성 이미지의 조작 및 분석에 적합하다.
+본 프로젝트는 **Ceyuan Yang and Yujun Shen의 연구(HIGAN)**에서 공개한 코드와 체크포인트를 기반으로 하여, StyleGAN을 활용한 이미지 생성을 수행하였다. 사용된 모델은 **LSUN Bedroom 데이터셋**(해상도 256×256, 약 50,000장)을 기반으로 학습된 것으로, 다양한 조명 조건과 구조적 특성이 반영되어 있어 생성 이미지의 조작 및 분석에 적합하다.
 
 ### 2. Latent Space 조작을 위한 SVM 적용
 Latent Space 조작 또한 HIGAN 연구에서 제안된 방식과 공개된 코드를 참고하여 구현되었다.  
@@ -93,7 +107,6 @@ SVM으로 생성된 Positive / Negative 벡터는 각각 StyleGAN의 Generator�
 [[예시데이터 생성](https://colab.research.google.com/drive/1gdmoDPuyOJKogsPuvj9BmficmRiDbomB)] <br>
 [[HiGAN_CAM](https://colab.research.google.com/drive/1U4E21tIwgUvybyZYvlB4m4CnWCxLP0ex)] <br>
 
-<br>
 
 ## 🛠 실행 방법 (How to Run)
 
@@ -104,6 +117,13 @@ SVM으로 생성된 Positive / Negative 벡터는 각각 StyleGAN의 Generator�
    - 🔗 [StyleGAN Bedroom Checkpoint 다운로드](https://www.dropbox.com/s/h1w7ld4hsvte5zf/stylegan_bedroom256_generator.pth)
 
 3. 프로젝트 루트 디렉토리에서 `Higan_CAM.ipynb` 실행
+
+<br> 
+
+## 📌 예시 결과 (Result)
+
+
+
 
 
 
