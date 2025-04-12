@@ -17,7 +17,7 @@ GAN은 학습을 통해 이미지의 구조적 특성을 레이어별로 학습�
 ### 📄 *Semantic Hierarchy Emerges in Deep Generative Representations for Scene Synthesis (HiGAN)*
 
 - **핵심 요약**:  
-  이 연구는 실내 장면 생성에 사용된 **StyleGAN 기반 Generator**에서 **계층적 의미 구조(Semantic Hierarchy)**가 자연스럽게 형성된다는 점에 주목하였다.  
+  이 연구는 실내 장면 생성에 사용된 **StyleGAN 기반 Generator**에서 **계층적 의미 구조(Semantic Hierarchy)** 가 자연스럽게 형성된다는 점에 주목하였다.  
   Latent space에서 **특정 객체(예: bed)의 존재 유무를 기준으로 SVM을 학습**하고, 이를 통해 생성자의 구조적 특성에 대한 **의미 있는 조작 및 해석**이 가능함을 보였다.
 
 - **핵심 구조(예시)**:  
@@ -82,12 +82,12 @@ Latent Space 조작 또한 HIGAN 연구에서 제안된 방식과 공개된 코�
 
 - StyleGAN으로부터 50,000장의 이미지를 생성  
 - 각 이미지에 대해 ResNet18 (Place365 pre-trained)을 사용하여 조명 강도를 0–3으로 측정  
-- 상위 2,000개 이미지를 **Positive (강한 조명)**, 하위 2,000개를 Negative (약한 조명)으로 라벨링  
+- 상위 2,000개 이미지를 **Positive (강한 조명)**, 하위 2,000개를 **Negative (약한 조명)** 으로 라벨링  
 - SVM을 통해 두 클래스의 경계를 학습한 후, Latent Space에서 조명 속성이 극대화/최소화된 두 벡터를 생성
 
 ### 3. Feature Map 기반 시각적 해석 (Grad-CAM)
 SVM으로 생성된 Positive / Negative 벡터는 각각 StyleGAN의 Generator를 통해 이미지로 복원된다.  
-이후, 각 생성 과정에서 Layer별 Feature Map을 추출하고 **Grad-CAM**을 적용하여 **속성에 반응한 시각적 영역(heatmap)**을 생성한다.
+이후, 각 생성 과정에서 Layer별 Feature Map을 추출하고 **Grad-CAM**을 적용하여 **속성에 반응한 시각적 영역(heatmap)** 을 생성한다.
 
 - Grad-CAM을 Positive / Negative 각각에 적용  
 - 각 Layer별 heatmap의 차이를 계산하여 속성이 반영된 특징 차이 누적  
