@@ -1,5 +1,5 @@
 # HiGAN_CAM
-CAM representation with HiGAN
+CAM representation of HiGAN
 
 
 ## 📌 Introduction
